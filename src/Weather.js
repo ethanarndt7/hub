@@ -34,7 +34,10 @@ export default function Weather() {
     return <div className="weather">{error}</div>;
   }
 
-  if (!weather || !weather.main || !weather.weather) return null;
+   if (!weather || !weather.main || !weather.weather) {
+    return <div className="weather">Loading weather...</div>;
+  }
+
 
 console.log("Weather data:", weather);
 
